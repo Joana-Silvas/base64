@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Decodificador</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   <header>
+      <center><h1>Mensagens ocultas</h1> </center> 
+    </header>
+    <container id="container">
+        <h2>Decodificador</h2>
+            <select name="base" id="baseid" onchange="increme()">
+            <option id="base64" value="base64" >Base64</option>
+            <option id="cesar" value="cesar">Cifra de Cesar</option>
+        </select>
+        
+        <div id=shift>
+         <label for="">Digite o incremento</label>  
+        <input id="incremento" placeholder=""></input>
+        </div>
+        
+        <form id=formradio>
+            <input type="radio" id="codificar" name="codificar" value="codificar">
+            <label for="codificar">Codificar</label>
+            <input type="radio" id="decodificar" name="codificar" value="decodificar">
+            <label for="decodificar">Decodificar</label>
+        </form>
+
+        <textarea cols="50" rows="5" type="text" required="required" onkeyup="send()" id="converte" placeholder="Coloque seu texto aqui!"></textarea>
+        <br>
+        <textarea cols="50" rows="5" id="retorno">Texto codificado aqui</textarea>
+
+    </container>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
